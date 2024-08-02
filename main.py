@@ -2,17 +2,18 @@
 # Referensi: ChatGPT
 # Menggunakan Paradigma Procedural
 
-from bmi_calculator.utils import clear_screen, sleep
+import os
+from time import sleep
 from bmi_calculator.calculator import calculate_bmi
+from bmi_calculator.bmi_results import hasil_bmi_kurus,hasil_bmi_gemuk,hasil_bmi_normal,hasil_bmi_obesitas
+from bmi_calculator.banner import banner
 
-clear_screen()
+os.system('cls')
 
 # Main
 def main():
   while True:
-    print(22*"*")
-    print("*** KALKULATOR BMI ***")
-    print(22*"*")
+    banner()
     
     jenis_kelamin = str(input("Jenis kelamin (L/P) : "))
     # Jika input yang dimasukan user tidak (L/P)
@@ -22,12 +23,12 @@ def main():
     elif jenis_kelamin == "l" or jenis_kelamin == "p":
         print("\nGunakan Huruf Kapital, Silahkan ulangi kembali! 😊")
         sleep(3)
-        clear_screen()
+        os.system('cls')
         continue
     else:
         print("\nInput yang anda masukkan salah! Silahkan input yang benar.")
         sleep(3)
-        clear_screen()
+        os.system('cls')
         continue
 
     berat_badan = int(input("Berat badan (kg)    : "))
@@ -38,31 +39,19 @@ def main():
 
     # Menampilkan hasil BMI
     if hasil_bmi < 18.5:
-      print("")
-      print (f"BMI anda sekitar {hasil_bmi:.2f}, yang termasuk dalam kategori KURUS")
-      sleep(10)
-      clear_screen()
+      hasil_bmi_kurus(hasil_bmi=hasil_bmi)
       continue
     
     elif hasil_bmi >= 18.5 and hasil_bmi <= 25 :
-      print("")
-      print (f"BMI anda sekitar {hasil_bmi:.2f}, yang termasuk dalam kategori NORMAL✨")
-      sleep(10)
-      clear_screen()
+      hasil_bmi_normal(hasil_bmi=hasil_bmi)
       continue
     
     elif hasil_bmi >= 25 and hasil_bmi <= 30:
-      print("")
-      print (f"BMI anda sekitar {hasil_bmi:.2f}, yang termasuk dalam kategori GEMUK")
-      sleep(10)
-      clear_screen()
+      hasil_bmi_gemuk(hasil_bmi=hasil_bmi)
       continue
     
     elif hasil_bmi >= 30:
-      print("")
-      print (f"BMI anda sekitar {hasil_bmi:.2f}, yang termasuk dalam kategori OBESITAS")
-      sleep(10)
-      clear_screen()
+      hasil_bmi_obesitas(hasil_bmi=hasil_bmi)
       continue
   
 if __name__ == '__main__':
