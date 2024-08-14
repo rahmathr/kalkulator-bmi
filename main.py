@@ -1,58 +1,44 @@
-# Referensi: https://hellosehat.com/health-tools/kebutuhan-kalori/
-# Referensi: ChatGPT
-# Menggunakan Paradigma Procedural
-
 import os
 from time import sleep
-from bmi_calculator.calculator import calculate_bmi
-from bmi_calculator.bmi_results import hasil_bmi_kurus,hasil_bmi_gemuk,hasil_bmi_normal,hasil_bmi_obesitas
-from bmi_calculator.banner import banner
+import bmi_calculator
+import bmi_calculator.input_users
 
 os.system('cls')
 
-# Main
-def main():
+if __name__ == "__main__":
   while True:
-    banner()
-    
-    jenis_kelamin = str(input("Jenis kelamin (L/P) : "))
-    # Jika input yang dimasukan user tidak (L/P)
+    bmi_calculator.header()
+
+    jenis_kelamin = bmi_calculator.input_users.jenis_kelamin()
     if jenis_kelamin == "L" or jenis_kelamin == "P":
-        pass
-        
+      bmi_calculator.input_users.pilihan_gender_1
     elif jenis_kelamin == "l" or jenis_kelamin == "p":
-        print("\nGunakan Huruf Kapital, Silahkan ulangi kembali! 😊")
-        sleep(3)
-        os.system('cls')
-        continue
+      bmi_calculator.input_users.pilihan_gender_2()
+      continue
     else:
-        print("\nInput yang anda masukkan salah! Silahkan input yang benar.")
-        sleep(3)
-        os.system('cls')
-        continue
+      bmi_calculator.input_users.pilihan_gender_3()
+      continue
 
-    berat_badan = int(input("Berat badan (kg)    : "))
-    usia = int(input("Usia                : "))
-    tinggi_badan = int(input("Tanggi badan (cm)   : "))
+    berat_badan = bmi_calculator.input_users.berat_badan()
+    usia = bmi_calculator.input_users.usia()
+    tinggi_badan = bmi_calculator.input_users.tinggi_badan()
+    hasil_bmi = bmi_calculator.calculate_bmi(tinggi_badan= tinggi_badan, berat_badan=berat_badan)
 
-    hasil_bmi = calculate_bmi(tinggi_badan=tinggi_badan, berat_badan= berat_badan)
-
-    # Menampilkan hasil BMI
     if hasil_bmi < 18.5:
-      hasil_bmi_kurus(hasil_bmi=hasil_bmi)
+      bmi_calculator.hasil_bmi_kurus(hasil_bmi=hasil_bmi)
       continue
-    
+
     elif hasil_bmi >= 18.5 and hasil_bmi <= 25 :
-      hasil_bmi_normal(hasil_bmi=hasil_bmi)
+      bmi_calculator.hasil_bmi_normal(hasil_bmi=hasil_bmi)
       continue
-    
+
     elif hasil_bmi >= 25 and hasil_bmi <= 30:
-      hasil_bmi_gemuk(hasil_bmi=hasil_bmi)
+      bmi_calculator.hasil_bmi_gemuk(hasil_bmi=hasil_bmi)
       continue
-    
+
     elif hasil_bmi >= 30:
-      hasil_bmi_obesitas(hasil_bmi=hasil_bmi)
+      bmi_calculator.hasil_bmi_obesitas(hasil_bmi=hasil_bmi)
       continue
-  
-if __name__ == '__main__':
-  main()
+
+    else:
+      print("Hasil Tidak Ditemukan 🤖")
