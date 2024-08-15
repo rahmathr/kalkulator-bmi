@@ -1,5 +1,4 @@
 import os
-from time import sleep
 import bmi_calculator
 import bmi_calculator.input_users
 
