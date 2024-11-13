@@ -1,9 +1,9 @@
 def berat_badan(berat_badan:int=0):
     while True:
       try:
-        return int(input("Berat badan (kg)    : "))
+        return int(input("Berat badan (kg)\t: "))
       except Exception:
-        print("")
+        print("") 
         print(">> Input Harus Berupa Angka!!")
         print("")
         continue
@@ -11,7 +11,7 @@ def berat_badan(berat_badan:int=0):
 def usia(usia:int=0):
   while True:
     try:
-      return int(input("Usia                : "))
+      return int(input("Usia\t\t\t: "))
     except Exception:
       print("")
       print(">> Input Harus Berupa Angka!!")
@@ -21,7 +21,7 @@ def usia(usia:int=0):
 def tinggi_badan(tinggi_badan:int=0):
   while True:
     try:
-      return int(input("Tanggi badan (cm)   : "))
+      return int(input("Tanggi badan (cm)\t: "))
     except Exception:
       print("")
       print(">> Input Harus Berupa Angka!!")

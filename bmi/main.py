@@ -1,43 +1,42 @@
 import os
-from input_user import type_gender, user
 from time import sleep
-from headers import headers
-from calculator_result import calculator, result
-from read_data import read
+from hasilkalkulator import hasil, kalkulator
+from inputuser import user
+from headers import header
+from bacadata import baca
+from timesleep import times
 os.system('cls')
 if __name__ == "__main__":
   while True:
-    headers.header()
+    header.header()
     print("A. RIWAYAT")
     print("B. START\n")
     pilihan_pertama = str(input("Pilihan (A/B) : "))
-    if pilihan_pertama == "A":
-      read.read_file()
-    elif pilihan_pertama == "B":
+    if pilihan_pertama in ["A","a"]:
+      baca.read_file()
+    elif pilihan_pertama in ["B","b"]:
       os.system("cls")
-      headers.header()
-      jenis_kelamin =  type_gender.jenis_kelamin()
-      if jenis_kelamin in ["L", "P"]:
-          type_gender.pilihan_gender_1()
-      elif jenis_kelamin in ["l", "p"]:
-          type_gender.pilihan_gender_2()
+      header.header()
+      nama = str(input('Nama\t\t\t: '))
+      jenis_kelamin =  str(input("Jenis kelamin (L/P)\t: "))
+      if jenis_kelamin in ["L","P"] or jenis_kelamin in ["l","p"]:
+        berat_badan = user.berat_badan()
+        usia = user.usia()
+        tinggi_badan = user.tinggi_badan()
+        hasil_bmi = kalkulator.kalkulator_bmi(tinggi_badan,berat_badan)
+        if  hasil_bmi < 18.5:
+            hasil.bmi_kurus(hasil_bmi)
+        elif hasil_bmi <= 25:
+            hasil.bmi_normal(hasil_bmi)
+        elif hasil_bmi >= 25 and hasil_bmi <= 30:
+            hasil.bmi_gemuk(hasil_bmi)
+        elif hasil_bmi >= 30:
+            hasil.bmi_obesitas(hasil_bmi)
+        else:
+            print("Hasil Tidak Ditemukan 🤖")
       else:
-          type_gender.pilihan_gender_3()
-      berat_badan = user.berat_badan()
-      usia = user.usia()
-      tinggi_badan = user.tinggi_badan()
-      hasil_bmi = calculator.calculate_bmi(tinggi_badan,berat_badan)
-      if  hasil_bmi < 18.5:
-          result.bmi_kurus(hasil_bmi)
-      elif hasil_bmi <= 25:
-          result.bmi_normal(hasil_bmi)
-      elif hasil_bmi >= 25 and hasil_bmi <= 30:
-          result.bmi_gemuk(hasil_bmi)
-      elif hasil_bmi >= 30:
-          result.bmi_obesitas(hasil_bmi)
-      else:
-          print("Hasil Tidak Ditemukan 🤖")
+        print("\nPilihan Tidak Ditemukan, Input Yang Benar (A/B)")
+        times.clearsleep()
     else:
       print("\nPilihan Tidak Ditemukan, Input Yang Benar (A/B)")
-      sleep(5)
-      os.system("cls")
+      times.clearsleep()
