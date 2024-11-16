@@ -1,2 +1,4 @@
 >>> BMI anda sekitar 23.88, yang termasuk dalam kategori NORMAL✨
 >>> BMI anda sekitar 23.88, yang termasuk dalam kategori NORMAL✨
+>>> BMI anda sekitar 23.88, yang termasuk dalam kategori NORMAL ✨
+>>> BMI anda sekitar 32.32, yang termasuk dalam kategori OBESITAS 🚨
