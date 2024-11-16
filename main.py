@@ -18,7 +18,7 @@ def pilih_menu() -> Optional[str]:
     print("A. START")
     print("B. HISTORY")
     print("C. DATABASE")
-    print("D. KELUAR\n")
+    print("D. EXIT\n")
 
     return input(">>> [A/B/C/D] : ").strip().upper()
 
