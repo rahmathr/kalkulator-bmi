@@ -1,20 +1,30 @@
 import os
 from time import sleep
-from typing import Union  # Tambahkan import untuk type hinting
 
-def simpan_bmi_di_datatxt(hasil: str) -> None:
+def kalkulator_bmi(tinggi_cm: float, berat_kg: float) -> float:
     """
-    Menyimpan hasil BMI ke file data.txt
+    Menghitung Body Mass Index (BMI) berdasarkan tinggi badan (dalam cm) dan berat badan (dalam kg).
 
-    Args:
-        hasil (str): Hasil perhitungan BMI yang akan disimpan
+    Parameters:
+    tinggi_cm (float): Tinggi badan dalam satuan cm.
+    berat_kg (float): Berat badan dalam satuan kg.
+
+    Returns:
+    float: Nilai BMI.
+
+    Raises:
+    ValueError: Jika tinggi_cm atau berat_kg kurang dari atau sama dengan nol.
+
+    Example:
+    >>> kalkulator_bmi(170, 70)
+    24.22
     """
-    # Pastikan direktori 'history' ada
-    os.makedirs('history', exist_ok=True)
+    if tinggi_cm <= 0 or berat_kg <= 0:
+        raise ValueError("Tinggi badan dan berat badan harus lebih dari nol.")
 
-    file_path = "history/data.txt"
-    with open(file_path, "a", encoding='utf-8') as file:
-        file.write(f"{hasil.replace('\n','')}\n")
+    tinggi_meter = tinggi_cm / 100  # Konversi tinggi badan dari cm ke meter
+    bmi = berat_kg / (tinggi_meter ** 2)  # Hitung BMI
+    return bmi
 
 def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
     """
@@ -26,17 +36,16 @@ def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
     """
     # Tambahkan emoji sesuai kondisi
     emoji_map = {
-        "KURUS": "",
+        "KURUS": "🌱",  # Menambahkan emoji untuk kategori kurus
         "NORMAL": "✨",
         "GEMUK": "⚠️",
         "OBESITAS": "🚨"
     }
 
     bmi = f"{hasil_bmi:.2f}"
-    hasil = f"\n>>> BMI anda sekitar {bmi}, yang termasuk dalam kategori {status_berat_badan} {emoji_map.get(status_berat_badan, '')}"
+    hasil = f"\nBMI anda sekitar {bmi}, yang termasuk dalam kategori {status_berat_badan} {emoji_map.get(status_berat_badan, '')}"
 
     print(hasil)
-    simpan_bmi_di_datatxt(hasil)
 
     # Tunggu sebentar dan bersihkan layar
     sleep(5)

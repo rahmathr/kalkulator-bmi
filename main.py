@@ -1,24 +1,26 @@
 import os
+from datetime import datetime
 from time import sleep
 from typing import Optional
 
 # Import modul-modul yang diperlukan
-from start import calculators, userinputs, headers, bmiresults
-from history import readtxt
+from start import bmi, user_inputs, headers
+# from database import read_database
 
-def pilih_menu() -> Optional[str]:
+def pilih_menu() -> str:
     """
     Menampilkan menu utama dan meminta pilihan pengguna.
 
     Returns:
-        Optional[str]: Pilihan pengguna atau None jika keluar.
+        str: Pilihan pengguna.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
     headers.header()
+    print(f"\n🗓️  {datetime.now().year}-{datetime.now().month}-{datetime.now().day}\n")
+
     print("A. START")
-    print("B. HISTORY")
-    print("C. DATABASE")
-    print("D. EXIT\n")
+    print("B. DATABASE")
+    print("C. EXIT\n")
 
     return input(">>> [A/B/C/D] : ").strip().upper()
 
@@ -30,29 +32,27 @@ def proses_bmi() -> None:
     headers.header()
 
     # Kumpulkan input pengguna
-    nama = userinputs.get_nama()
-    jenis_kelamin = userinputs.get_jenis_kelamin()
-    berat_badan = userinputs.get_berat_badan()
-    usia = userinputs.get_usia()
-    tinggi_badan = userinputs.get_tinggi_badan()
+    nama = user_inputs.get_nama()
+    jenis_kelamin = user_inputs.get_jenis_kelamin()
+    berat_badan = user_inputs.get_berat_badan()
+    usia = user_inputs.get_usia()
+    tinggi_badan = user_inputs.get_tinggi_badan()
 
     # Hitung BMI
-    hasil_bmi = calculators.kalkulator_bmi(tinggi_badan, berat_badan)
-
-    # Kategorikan BMI
     try:
+        hasil_bmi = bmi.kalkulator_bmi(tinggi_badan, berat_badan)
+
+        # Kategorikan BMI
         if hasil_bmi < 18.5:
-            bmiresults.bmi_kurus(hasil_bmi)
+            bmi.bmi_kurus(hasil_bmi)
         elif hasil_bmi <= 25:
-            bmiresults.bmi_normal(hasil_bmi)
-        elif 25 <= hasil_bmi <= 30:
-            bmiresults.bmi_gemuk(hasil_bmi)
-        elif hasil_bmi > 30:
-            bmiresults.bmi_obesitas(hasil_bmi)
-        else:
-            print("Hasil Tidak Ditemukan 🤖")
+            bmi.bmi_normal(hasil_bmi)
+        elif 25 < hasil_bmi <= 30:
+            bmi.bmi_gemuk(hasil_bmi)
+        else:  # hasil_bmi > 30
+            bmi.bmi_obesitas(hasil_bmi)
     except Exception as e:
-        print(f"Terjadi kesalahan dalam perhitungan: {e}")
+        print(f"Terjadi kesalahan dalam perhitungan BMI: {e}")
         sleep(3)
 
 def main():
@@ -66,12 +66,10 @@ def main():
             if pilihan == 'A':
                 proses_bmi()
             elif pilihan == 'B':
-                readtxt.read_file()
-            elif pilihan == 'C':
-                print("COMING SOON 🚧")
+                print("\nCOMING SOON 🚧")
                 sleep(2)
-            elif pilihan == 'D':
-                print("Terima kasih! Sampai jumpa. 👋")
+            elif pilihan == 'C':
+                print("\nTerima kasih! Sampai jumpa. 👋")
                 break
             else:
                 print("\nPilihan Tidak Valid. Silakan pilih A/B/C/D.")

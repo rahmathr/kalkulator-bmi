@@ -1,7 +1,7 @@
 def get_nama() -> str:
     while True:
         nama_input = input('Nama : ')
-        if nama_input.isalpha():
+        if all(x.isalpha() or x.isspace() for x in nama_input):
             return nama_input
         else:
             print("\n>>> Input Harus Berupa Huruf!!\n")
