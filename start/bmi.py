@@ -28,7 +28,7 @@ def kalkulator_bmi(tinggi_cm: float, berat_kg: float) -> float:
 
 def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
     """
-    Fungsi umum untuk menampilkan hasil BMI
+    Fungsi umum untuk menampilkan hasil BMI.
 
     Args:
         hasil_bmi (float): Nilai BMI
@@ -36,7 +36,7 @@ def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
     """
     # Tambahkan emoji sesuai kondisi
     emoji_map = {
-        "KURUS": "🌱",  # Menambahkan emoji untuk kategori kurus
+        "KURUS": "🌱",  
         "NORMAL": "✨",
         "GEMUK": "⚠️",
         "OBESITAS": "🚨"
@@ -47,13 +47,13 @@ def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
 
     print(hasil)
 
-    # Tunggu sebentar dan bersihkan layar
-    sleep(5)
+    # Tunggu hingga pengguna menekan Enter
+    input("\nTekan Enter untuk melanjutkan...")
 
     # Gunakan cross-platform clear screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# Fungsi-fungsi spesifik status BMI dapat disederhanakan
+# Fungsi-fungsi spesifik status BMI
 def bmi_kurus(hasil_bmi: float) -> None:
     """Menampilkan hasil BMI untuk kategori kurus"""
     tampilkan_hasil_bmi(hasil_bmi, "KURUS")
