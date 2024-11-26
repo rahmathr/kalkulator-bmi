@@ -1,6 +1,6 @@
 def get_nama_lengkap() -> str:
     while True:
-        nama_lengkap_input = input('Nama Lengkap: ').strip().capitalize()
+        nama_lengkap_input = input('Nama Lengkap: ').strip().title()
         # Memeriksa apakah nama hanya terdiri dari huruf, spasi, dan karakter tambahan yang valid
         if all(x.isalpha() or x.isspace() or x in "'-." for x in nama_lengkap_input):
             return nama_lengkap_input

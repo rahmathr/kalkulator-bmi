@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from start import headers
+from bmi import headers
 
 def read_database():
     os.system('cls' if os.name == 'nt' else 'clear')  # Bersihkan layar untuk semua platform

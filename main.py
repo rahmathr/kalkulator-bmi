@@ -3,7 +3,7 @@ from datetime import datetime
 from time import sleep
 
 # Import modul-modul yang diperlukan
-from start import bmi, user_inputs, headers
+from bmi import bmi, user_inputs, headers
 from database import read_databases
 
 def pilih_menu() -> str:
@@ -17,7 +17,7 @@ def pilih_menu() -> str:
     headers.header()
     print(f"\n🗓️  {datetime.now().strftime('%Y-%m-%d')}\n")
 
-    print("A. START")
+    print("A. BMI")
     print("B. DATABASE")
     print("C. EXIT\n")
 

@@ -23,8 +23,7 @@ def kalkulator_bmi(tinggi_cm: float, berat_kg: float) -> float:
         raise ValueError("Tinggi badan dan berat badan harus lebih dari nol.")
 
     tinggi_meter = tinggi_cm / 100  # Konversi tinggi badan dari cm ke meter
-    bmi = berat_kg / (tinggi_meter ** 2)  # Hitung BMI
-    return bmi
+    return berat_kg / (tinggi_meter ** 2)
 
 def tampilkan_hasil_bmi(hasil_bmi: float, status_berat_badan: str) -> None:
     """

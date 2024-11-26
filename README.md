@@ -1,34 +1,41 @@
-# Kalkulator BMI 🌡️
+# SATU SEHAT 🌱
 
-Selamat datang di **Kalkulator BMI**! 🎉
+Selamat datang di **SATU SEHAT**! 🎉
 
-Kalkulator BMI adalah alat yang dirancang dengan cermat untuk membantu Anda menghitung **Indeks Massa Tubuh (BMI)** dengan cepat dan mudah. Dengan hanya memasukkan tinggi dan berat badan Anda, Anda akan mendapatkan hasil yang akurat dalam hitungan detik!
+SATU SEHAT adalah platform yang dirancang untuk membantu Anda mencapai dan mempertahankan kesehatan yang optimal. Dengan berbagai alat seperti Indeks Massa Tubuh (BMI), Tingkat Metabolisme Basal (BMR), dan konversi skala suhu, Anda dapat memantau kesehatan Anda dengan cepat dan mudah!
 
-## Kenapa Anda Memerlukan Kalkulator BMI? 🤔
+## Kenapa Anda Memerlukan SATU SEHAT? 🤔
 
-- **Pemantauan Kesehatan**: Memahami BMI Anda dapat membantu Anda mengevaluasi status kesehatan dan kebugaran Anda.
-- **Mendukung Tujuan Berat Badan**: Apakah Anda ingin menurunkan berat badan, menambah massa otot, atau hanya ingin tetap bugar? Kalkulator ini adalah teman setia Anda dalam mencapai tujuan tersebut!
-- **Desain Portabel dan Ramah Pengguna**: Dengan desain yang ramping dan antarmuka yang intuitif, Kalkulator BMI ini sangat mudah digunakan oleh siapa saja, di mana saja!
+- **Pemantauan Kesehatan**: Memahami BMI dan BMR Anda dapat membantu Anda mengevaluasi status kesehatan dan kebugaran Anda.
+- **Mendukung Tujuan Kesehatan**: Apakah Anda ingin menurunkan berat badan, meningkatkan kebugaran, atau hanya ingin hidup lebih sehat? SATU SEHAT adalah teman setia Anda dalam mencapai tujuan tersebut!
+- **Desain Portabel dan Ramah Pengguna**: Dengan desain yang ramping dan antarmuka yang intuitif, SATU SEHAT ini sangat mudah digunakan oleh siapa saja, di mana saja!
 
-## Cara Menggunakan Kalkulator BMI 📏⚖️
+## Fitur Utama SATU SEHAT 📏⚖️
 
-1. Masukkan tinggi badan Anda (dalam cm atau m).
-2. Masukkan berat badan Anda (dalam kg).
-3. Tekan tombol "Hitung" dan lihat hasilnya dalam sekejap!
+### 1. Indeks Massa Tubuh (BMI)
 
-## Hasil BMI Anda 💡
+BMI adalah alat untuk menilai apakah berat badan Anda sesuai dengan tinggi badan. Anda cukup memasukkan berat badan dan tinggi badan untuk mendapatkan hasil BMI Anda. 
 
-- **Kekurangan Berat Badan**: BMI < 18.5
-- **Berat Badan Normal**: 18.5 - 24.9
-- **Kelebihan Berat Badan**: 25 - 29.9
-- **Obesitas**: BMI ≥ 30
+- **Kategori BMI**:
+  - **Kekurangan Berat Badan**: BMI < 18.5
+  - **Berat Badan Normal**: 18.5 - 24.9
+  - **Kelebihan Berat Badan**: 25 - 29.9
+  - **Obesitas**: BMI ≥ 30
 
-## Bergabunglah dengan Komunitas Kami! 🌍
+### 2. Tingkat Metabolisme Basal (BMR)
 
-Kami percaya bahwa kesehatan adalah perjalanan, bukan tujuan. Bergabunglah dengan kami dan berbagi pengalaman Anda! Kami akan senang mendengar bagaimana Kalkulator BMI ini membantu Anda dalam perjalanan kesehatan Anda.
+BMR adalah jumlah kalori yang dibutuhkan tubuh Anda untuk menjaga fungsi dasar saat istirahat. Dengan memasukkan data seperti berat badan, tinggi badan, usia, dan jenis kelamin, Anda dapat mengetahui kebutuhan kalori harian Anda.
+
+### 3. Konversi Skala Suhu
+
+Kami juga menyediakan alat untuk mengonversi suhu antara Celsius (°C), Fahrenheit (°F), dan Kelvin (K). Anda hanya perlu memasukkan suhu dalam satu skala untuk mendapatkan hasil konversi ke skala lainnya.
+
+## Bergabunglah dengan Komunitas SATU SEHAT! 🌍
+
+Kami percaya bahwa kesehatan adalah perjalanan, bukan tujuan. Bergabunglah dengan kami dan berbagi pengalaman Anda! Kami akan senang mendengar bagaimana SATU SEHAT membantu Anda dalam perjalanan kesehatan Anda.
 
 ## Feedback dan Kontak 💌
 
 Kami ingin mendengar dari Anda! Jika Anda memiliki masukan, saran, atau pertanyaan, jangan ragu untuk menghubungi kami di [rahmathr.king@gmail.com](mailto:rahmathr.king@gmail.com). Umpan balik Anda sangat berharga bagi kami dalam meningkatkan pengalaman pengguna.
 
-Terima kasih telah menggunakan Kalkulator BMI! Mari kita jaga kesehatan bersama! 💪✨
+Terima kasih telah menggunakan SATU SEHAT! Mari kita jaga kesehatan bersama! 💪✨
