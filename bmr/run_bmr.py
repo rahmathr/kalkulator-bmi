@@ -1,12 +1,13 @@
 import os
 from time import sleep
 
-from tools import calculators, headers
-from database import read_databases
+from utils import display_headers
+from utils import calculators
+from data import reader
 
 def pilih_menu() -> str:
     os.system("cls")
-    headers.header()
+    display_headers.header()
     print(f"| [1] Hitung BMR{8*"\t"}|")
     print(f"| [2] Lihat Database{8*"\t"}|")
     print(f"| [3] Exit{9*"\t"}|")
@@ -20,7 +21,7 @@ def main_bmr():
             if pilihan == 1:
                 calculators.hitung_kebutuhan_kalori()
             elif pilihan == 2:
-                read_databases.read_database()
+                reader.read_database()
                 sleep(2)
             elif pilihan == 3:
                 print("\nTerima kasih! Sampai jumpa. 👋")

@@ -1,12 +1,13 @@
 import os
 from time import sleep
 
-from tools import user_inputs,headers
-from database.save_process_bmr import simpan_proses_bmr
+from utils import display_headers
+from utils import user_inputs
+from data.saver import simpan_proses_bmr
 
 def hitung_kebutuhan_kalori():
     os.system("cls")
-    headers.header()
+    display_headers.header()
     try:
         global nama_lengkap,usia,jenis_kelamin,tinggi_badan,berat_badan
         nama_lengkap = user_inputs.input_nama_lengkap()
@@ -16,7 +17,7 @@ def hitung_kebutuhan_kalori():
         berat_badan = user_inputs.input_berat_badan()
         if jenis_kelamin == "L":
             bmr_pria = hitung_bmr_pria(berat_badan, tinggi_badan, usia)
-            headers.header_aktivitas_fisik()
+            display_headers.header_aktivitas_fisik()
             total_kalori = user_inputs.input_intensitas_aktivitas()
             aktivitas_fungsi_pria = {
                 1: aktivitas_ringan_pria,
@@ -27,7 +28,7 @@ def hitung_kebutuhan_kalori():
 
         elif jenis_kelamin == "P":
             bmr_wanita = hitung_bmr_wanita(berat_badan, tinggi_badan, usia)
-            headers.header_aktivitas_fisik()
+            display_headers.header_aktivitas_fisik()
             total_kalori = user_inputs.input_intensitas_aktivitas()
             aktivitas_fungsi_wanita = {
                 1: aktivitas_ringan_wanita,
