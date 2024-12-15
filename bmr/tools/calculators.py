@@ -1,5 +1,6 @@
 import os
 from time import sleep
+
 from tools import user_inputs,headers
 from database.save_process_bmr import simpan_proses_bmr
 
@@ -8,15 +9,15 @@ def hitung_kebutuhan_kalori():
     headers.header()
     try:
         global nama_lengkap,usia,jenis_kelamin,tinggi_badan,berat_badan
-        nama_lengkap = user_inputs.get_nama_lengkap()
-        usia = user_inputs.get_usia()
-        jenis_kelamin = user_inputs.get_jenis_kelamin()
-        tinggi_badan = user_inputs.get_tinggi_badan()
-        berat_badan = user_inputs.get_berat_badan()
+        nama_lengkap = user_inputs.input_nama_lengkap()
+        usia = user_inputs.input_umur()
+        jenis_kelamin = user_inputs.input_jenis_kelamin()
+        tinggi_badan = user_inputs.input_tinggi_badan()
+        berat_badan = user_inputs.input_berat_badan()
         if jenis_kelamin == "L":
             bmr_pria = hitung_bmr_pria(berat_badan, tinggi_badan, usia)
             headers.header_aktivitas_fisik()
-            total_kalori = user_inputs.get_intensitas_aktivitas()
+            total_kalori = user_inputs.input_intensitas_aktivitas()
             aktivitas_fungsi_pria = {
                 1: aktivitas_ringan_pria,
                 2: aktivitas_sedang_pria,
@@ -27,7 +28,7 @@ def hitung_kebutuhan_kalori():
         elif jenis_kelamin == "P":
             bmr_wanita = hitung_bmr_wanita(berat_badan, tinggi_badan, usia)
             headers.header_aktivitas_fisik()
-            total_kalori = user_inputs.get_intensitas_aktivitas()
+            total_kalori = user_inputs.input_intensitas_aktivitas()
             aktivitas_fungsi_wanita = {
                 1: aktivitas_ringan_wanita,
                 2: aktivitas_sedang_wanita,

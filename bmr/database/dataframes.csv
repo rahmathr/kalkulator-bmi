@@ -1,2 +1,21 @@
-NamaLengkap,Usia(tahun),JenisKelamin,TinggiBadan(cm),BeratBadan(kg),BMR(kkal),TotalKalori(kkal)
-Rahmat Hidayat Ramadhan,L,69,19,163,1697,2376
+Nama, Usia_Tahun, Gender, Tinggi_Badan_cm, Berat_Badan_kg, BMR_kalori, Total_Kalori
+Ahmad Maulana,25,L,170,70,1680,2100
+Siti Aisyah,30,P,160,55,1300,1650
+Budi Santoso,22,L,175,68,1750,2200
+Rina Permatasari,28,P,158,50,1230,1600
+Dimas Prasetyo,35,L,165,75,1850,2400
+Lestari Widodo,26,P,162,52,1260,1550
+Rizky Kurniawan,20,L,180,72,1800,2250
+Wulan Sari,32,P,155,48,1200,1500
+Arif Hidayat,27,L,172,65,1600,2000
+Desi Ratnasari,23,P,164,54,1290,1620
+Surya Wibowo,29,L,176,77,1870,2350
+Nita Anggraini,24,P,159,53,1250,1575
+Rahmat Prabowo,31,L,168,80,1900,2500
+Melati Sulastri,21,P,157,49,1210,1520
+Farhan Mahendra,26,L,174,73,1820,2280
+Fitri Indriyani,33,P,161,57,1320,1650
+Hendra Kurnia,19,L,178,76,1850,2320
+Putri Amelia,30,P,160,58,1340,1680
+Agus Suryanto,28,L,171,69,1670,2120
+Dewi Rahayu,22,P,162,51,1270,1580

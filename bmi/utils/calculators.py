@@ -1,18 +1,19 @@
 import os
 from time import sleep
 
-from database.save_process_bmi import simpan_hasil_bmi
-from tools import user_inputs,headers
+from utils.user_inputs import input_nama_lengkap,input_jenis_kelamin,input_berat_badan,input_umur,input_tinggi_badan
+from data.saver import simpan_hasil_bmi
+from utils import display_headers
 
 def hitung_dan_simpan_bmi() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
-    headers.tampilkan_header_utama()
+    display_headers.tampilkan_header_utama()
     try:
-        nama_lengkap = user_inputs.input_nama_lengkap()
-        jenis_kelamin = user_inputs.input_jenis_kelamin()
-        berat_badan = user_inputs.input_berat_badan()
-        usia = user_inputs.input_umur()
-        tinggi_badan = user_inputs.input_tinggi_badan()
+        nama_lengkap = input_nama_lengkap()
+        jenis_kelamin = input_jenis_kelamin()
+        berat_badan = input_berat_badan()
+        usia = input_umur()
+        tinggi_badan = input_tinggi_badan()
         hasil_bmi = hitung_bmi(tinggi_badan, berat_badan)
         if hasil_bmi < 18.5:
             tampilkan_bmi_kurus(hasil_bmi)
