@@ -5,7 +5,7 @@ from utils import display_headers
 
 def read_database():
     os.system('cls' if os.name == 'nt' else 'clear')
-    display_headers.header_database()
+    display_headers.tampilan_header_database()
     file_path = "bmr/data/dataframes.csv"
 
     try:

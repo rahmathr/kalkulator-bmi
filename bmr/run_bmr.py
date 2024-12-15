@@ -7,7 +7,7 @@ from data import reader
 
 def pilih_menu() -> str:
     os.system("cls")
-    display_headers.header()
+    display_headers.tampilan_header_utama()
     print(f"| [1] Hitung BMR{8*"\t"}|")
     print(f"| [2] Lihat Database{8*"\t"}|")
     print(f"| [3] Exit{9*"\t"}|")
