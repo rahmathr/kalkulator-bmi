@@ -1,16 +1,15 @@
 def tampilan_header_utama():
-    judul_utama = "Kalkulator Kebutuhan Energi".center(79)
+    judul_utama = "Kalkulator BMI".center(79)
     print(f"+{79*'-'}+")
     print(f"|{judul_utama}|")
     print(f"+{79*'-'}+")
     
-    deskripsi_utama = "Hitung jumlah kalori yang dibakar tubuh Anda dalam keadaan istirahat total.".center(79)
-    print(f"+{79*'-'}+")
+    deskripsi_utama = "Apakah berat badan Anda sudah ideal?".center(79)
     print(f"|{deskripsi_utama}|")
     print(f"+{79*'-'}+")
 
 def tampilan_header_database():
-    judul_database = "Kalkulator Kebutuhan Energi | Database".center(103)
+    judul_database = "Kalkulator BMI | Database".center(103)
     print(f"+{103*'-'}+")
     print(f"|{judul_database}|")
     print(f"+{103*'-'}+")

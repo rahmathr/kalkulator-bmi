@@ -9,7 +9,7 @@ def input_nama_lengkap() -> str:
 def input_umur() -> int:
     while True:
         try:
-            umur = int(input("Umur : "))
+            umur = int(input("Berapa umur Anda saat ini? : "))
             if 0 <= umur <= 120:
                 return umur
             else:

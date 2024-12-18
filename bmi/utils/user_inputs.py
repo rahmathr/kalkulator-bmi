@@ -8,7 +8,7 @@ def  input_nama_lengkap() -> str:
 
 def input_jenis_kelamin() -> str:
     while True:
-        jenis_kelamin = input("Jenis kelamin (L/P) : ").strip().upper()
+        jenis_kelamin = input("Apa jenis kelamin Anda? (L/P) : ").strip().upper()
         if jenis_kelamin in ['L', 'P']:
             return jenis_kelamin
         else:
@@ -17,7 +17,7 @@ def input_jenis_kelamin() -> str:
 def  input_berat_badan() -> int:
     while True:
         try:
-            berat_badan = int(input("Berat badan (kg) : "))
+            berat_badan = int(input("Berapa berat badan Anda? (kg) : "))
             if 0 < berat_badan <= 300:
                 return berat_badan
             else:
@@ -28,7 +28,7 @@ def  input_berat_badan() -> int:
 def input_umur() -> int:
     while True:
         try:
-            umur = int(input("Umur : "))
+            umur = int(input("Berapa umur Anda saat ini? : "))
             if 0 < umur <= 120:
                 return umur
             else:
@@ -39,7 +39,7 @@ def input_umur() -> int:
 def  input_tinggi_badan() -> int:
     while True:
         try:
-            tinggi_badan = int(input("Tinggi badan (cm) : "))
+            tinggi_badan = int(input("Berapa tinggi Anda? (cm) : "))
             if 0 < tinggi_badan <= 300:
                 return tinggi_badan
             else:
