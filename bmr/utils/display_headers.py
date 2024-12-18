@@ -1,18 +1,24 @@
 def tampilan_header_utama():
+    judul_utama = "Kalkulator Kebutuhan Energi".center(79)
     print(f"+{79*'-'}+")
-    print(f"| Kalkulator Kebutuhan Energi\t\t\t\t\t\t\t|")
+    print(f"|{judul_utama}|")
     print(f"+{79*'-'}+")
-    print("| Hitung jumlah kalori yang dibakar tubuh Anda dalam keadaan istirahat total.\t|")
+    
+    deskripsi_utama = "Hitung jumlah kalori yang dibakar tubuh Anda dalam keadaan istirahat total.".center(79)
+    print(f"+{79*'-'}+")
+    print(f"|{deskripsi_utama}|")
     print(f"+{79*'-'}+")
 
 def tampilan_header_database():
+    judul_database = "Kalkulator Kebutuhan Energi | Database".center(103)
     print(f"+{103*'-'}+")
-    print(f"|\t\t\t\t\tBMR CALCULATOR | DATABASE\t\t\t\t\t|")
+    print(f"|{judul_database}|")
     print(f"+{103*'-'}+")
-
+    
 def tampilan_header_aktivitas_fisik():
+    judul_aktivitas_fisik = "TINGKAT AKTIVITAS FISIK".center(63)
     print(f"+{63*'-'}+")
-    print(f"|\t\t\tTINGKAT AKTIVITAS FISIK\t\t\t|")
+    print(f"|{judul_aktivitas_fisik}|")
     print(f"+{63*'-'}+")
     aktivitas_pilihan = [
         "| [1] Hampir tidak pernah berolahraga\t\t\t\t|",

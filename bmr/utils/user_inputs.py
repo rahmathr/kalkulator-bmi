@@ -57,5 +57,3 @@ def input_intensitas_aktivitas() -> int:
                 print("\n>>> Pilihan tidak valid. Harap pilih 1, 2, atau 3.\n")
         except:
             print("\n>>> Input Harus Berupa Angka!!\n")
-
-        return total_kalori

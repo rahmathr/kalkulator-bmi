@@ -1,11 +1,15 @@
 def tampilkan_header_utama():
+    judul_utama = "Kalkulator Kesehatan Berat Badan".center(71)
     print(f"+{71*"-"}+")
-    print(f"| Kalkulator Kesehatan Berat Badan\t\t\t\t\t|")
+    print(f"|{judul_utama}|")
+    deskripsi_utama = "Mengetahui status berat badan Anda: kurang, ideal, atau berlebih.".center(71)
     print(f"+{71*"-"}+")
-    print("| Mengetahui status berat badan Anda: kurang, ideal, atau berlebih.\t|")
+    print(f"|{deskripsi_utama}|")
     print(f"+{71*"-"}+")
-
+    
+    
 def tampilkan_header_database():
-    print(f"+{79*"-"}+")
-    print(f"|\t\t\tBMI CALCULATOR | DATABASE\t\t\t\t|")
-    print(f"+{79*"-"}+")
+    judul_database = "Kalkulator Kesehatan Berat Badan | Database".center(100)
+    print(f"+{100*"-"}+")
+    print(f"|{judul_database}|")
+    print(f"+{100*"-"}+")

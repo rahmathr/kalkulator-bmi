@@ -28,11 +28,11 @@ def hitung_kebutuhan_kalori():
                 3: aktivitas_berat_pria
             }
             
-            aktivitas_fungsi_pria.get(total_kalori, lambda x: print("Pilihan tidak valid"))(bmr_pria)
+            aktivitas_fungsi_pria.get(total_kalori)(bmr_pria)
 
         elif jenis_kelamin.upper() == "P":
             bmr_wanita = hitung_bmr_wanita(berat_badan, tinggi_badan, usia)
-            display_headers.header_aktivitas_fisik()
+            display_headers.tampilan_header_aktivitas_fisik()
             total_kalori = user_inputs.input_intensitas_aktivitas()
             
             aktivitas_fungsi_wanita = {
@@ -41,7 +41,7 @@ def hitung_kebutuhan_kalori():
                 3: aktivitas_berat_wanita
             }
             
-            aktivitas_fungsi_wanita.get(total_kalori, lambda x: print("Pilihan tidak valid"))(bmr_wanita)
+            aktivitas_fungsi_wanita.get(total_kalori)(bmr_wanita)
 
         else:
             print("Jenis kelamin tidak valid!")
@@ -69,10 +69,8 @@ def hitung_bmr_wanita(berat_badan: float, tinggi_badan: float, usia: int) -> flo
 
 def proses_kalori(bmr: float, faktor_aktivitas: float, jenis_aktivitas: str):
     kalori_kebutuhan = bmr * faktor_aktivitas
-    
-    print(f"\nKebutuhan Kalori Anda:")
-    print(f"BMR: {bmr:.0f} kkal")
-    print(f"Total Kebutuhan Kalori ({jenis_aktivitas}): {kalori_kebutuhan:.0f} kkal")
+    print(f"\nBMR-nya sebesar {bmr:.0f} kkal, sedangkan kebutuhan kalorinya sebesar {kalori_kebutuhan:.0f} kkal")
+
     input("\nTekan Enter untuk melanjutkan...")
 
     simpan_proses_bmr(
