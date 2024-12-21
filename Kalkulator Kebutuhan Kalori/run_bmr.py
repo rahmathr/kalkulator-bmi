@@ -27,8 +27,8 @@ def main_bmr():
                 print("\nTerima kasih! Sampai jumpa. 👋")
                 break
             else:
-                print("\nPilihan Tidak Valid. Silakan pilih A/B/C.")
-                sleep(2)
+                print("\nPilihan Tidak Valid. Silakan pilih 1/2/3.")
+                input("\nTekan enter untuk melanjutkan...")
         except KeyboardInterrupt:
             print("\n\nProgram dihentikan oleh pengguna.")
             break

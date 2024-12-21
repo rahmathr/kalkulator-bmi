@@ -28,7 +28,7 @@ def main_bmi():
                 break
             else:
                 print("\nPilihan Tidak Valid. Silakan pilih 1/2/3.")
-                sleep(2)
+                input("\nTekan enter untuk melanjutkan...")
         except KeyboardInterrupt:
             print("\n\nProgram dihentikan oleh pengguna.")
             break

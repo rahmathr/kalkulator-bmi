@@ -1,17 +1,17 @@
+import os
+from utils.display_headers import tampilkan_header_database
+
 import pandas as pd
 
-import os
-from utils import display_headers
-
-def read_database():
+def tampilkan_database_bmi():
     os.system('cls' if os.name == 'nt' else 'clear')
-    display_headers.tampilan_header_database()
-    file_path = "bmr/data/dataframes.csv"
+    tampilkan_header_database()
+    file_path = "Kalkulator BMI/data/dataframe.csv"
 
     try:
         content = pd.read_csv(file_path)
         print(content)
-        print(f"+{103*'-'}+")
+        print(f"+{79*"-"}+")
     except FileNotFoundError:
         print(f"File tidak ditemukan: {file_path}")
     except pd.errors.EmptyDataError:
